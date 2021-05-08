@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class PlayerActivity extends AppCompatActivity implements View.OnClickListener {
     private TextView title_text;
-    private ImageView title;
+    private ImageView title_img;
     private ImageButton play_btn;
     private ImageButton stop_btn;
     private ImageButton pause_btn;
@@ -22,7 +22,7 @@ public class PlayerActivity extends AppCompatActivity implements View.OnClickLis
     private boolean LoopOn;
     private boolean SoundOff;
     private boolean isComplete;
-    private MediaPlayer mediaPlayer;
+    private static MediaPlayer mediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,7 @@ public class PlayerActivity extends AppCompatActivity implements View.OnClickLis
             isComplete = bundle.getBoolean("isComplete");
             jpgId=bundle.getInt("jpgId");
             title_text.setText(mp3Name);
+            title_img.setImageResource(jpgId);
             play_btn.setEnabled(false);
             stop_btn.setEnabled(false);
             playdelay();
@@ -71,7 +72,7 @@ public class PlayerActivity extends AppCompatActivity implements View.OnClickLis
 
     private void findViews() {
         title_text = findViewById(R.id.title_text);
-        title = findViewById(R.id.title);
+        title_img = findViewById(R.id.title_img);
         play_btn = findViewById(R.id.play_btn);
         stop_btn = findViewById(R.id.stop_btn);
 
