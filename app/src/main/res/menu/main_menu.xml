@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/SoundOff"
+        android:title="@string/SoundOff" />
+    <item
+        android:id="@+id/LoopOn"
+        android:title="@string/LoopOn"></item>
+    <item
+        android:id="@+id/About"
+        android:title="@string/About" />
+</menu>
