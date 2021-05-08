@@ -41,7 +41,6 @@ public class PlayerActivity extends AppCompatActivity implements View.OnClickLis
             play_btn.setEnabled(false);
             stop_btn.setEnabled(false);
             playdelay();
-
         }
         play_btn.setOnClickListener(this);
         stop_btn.setOnClickListener(this);
